@@ -1,3 +1,4 @@
+## makematrixVector function makes a list of functions setinverse: stores the inverse which can in future be returned by getinverse
 makematrixVector <- function(x = matrix()) {
     s <- NULL
     set <- function(y) {
@@ -14,7 +15,7 @@ makematrixVector <- function(x = matrix()) {
 
 }
 
-
+## cacheinverse works on the list of functions returned by makematrixVector to return inverse
 cacheinverse <- function(x) {
     s <- x$getinverse()
     if(!is.null(s)) {
